@@ -25,7 +25,9 @@ Route::group(['middleware' => 'auth'], function() {
 
 
     Route::group(['middleware' => 'email_verified'], function() {
-        // 删掉这里面的内容
+
+        Route::get('user_addresses', 'UserAddressesController@index')->name('user_addresses.index');
+
     });
 
 });
